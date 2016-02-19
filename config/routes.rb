@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'events/index'
+
+  get 'events/edit'
+
+  get 'events/show'
+
   get 'welcome/index'
   root to: "welcome#index"  
 
