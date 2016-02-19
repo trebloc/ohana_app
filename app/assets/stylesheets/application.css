@@ -21,6 +21,11 @@
   padding-right: 20px;
  }
 
+.navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 body {
   font-size: 25px;
   font-family: 'Open Sans Condensed', sans-serif;
