@@ -9,5 +9,9 @@
     <li>Place: <%= @event.place %></li>  
     <li>Date: <%= @event.date %></li>
     <li>Time: <%= @event.time %></li>               
-  </ul>  
+  </ul> 
+  <div class="btn-group">
+    <a href="/events/<%= @event.id %>/edit" button class="btn btn-success btn-lg">Edit</a>
+  </div>
+</div>   
 
