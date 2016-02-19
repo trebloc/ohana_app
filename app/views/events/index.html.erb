@@ -3,6 +3,7 @@
 </div>
 
 <div class="container">
+
 <% @events.each do |event| %>
   <p>
     <strong><%= link_to event.name, event_path(event.id) %></strong>
