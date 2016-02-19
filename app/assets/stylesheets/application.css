@@ -46,3 +46,7 @@ h1 span {
 h1 span.spacer {
    padding:0 5px;
 } 
+
+li {
+  list-style-type: none;
+}

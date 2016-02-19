@@ -1,2 +1,13 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="jumbotron">
+  <h1><span><%= @event.name %></span></h1>
+</div>
+
+<div class="container">
+  <ul>
+    <li>Name: <%= @event.name %></li>
+    <li>Description: <%= @event.description %></li>
+    <li>Place: <%= @event.place %></li>  
+    <li>Date: <%= @event.date %></li>
+    <li>Time: <%= @event.time %></li>               
+  </ul>  
+
