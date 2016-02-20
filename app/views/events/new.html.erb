@@ -18,10 +18,11 @@
       <%= f.label :place, "Place", class: " control-label" %>
       <%= f.text_field :place, :required => true, class: "form-control", placeholder: "Place" %>
     </div>
-    <div class="form-group">
-      <%= f.label :DateTime, "Date", class: "control-label" %>
-      <%= f.text_field :DateTime, :required => true, class: "form-control", placeholder: "Date" %>
-    </div>  
+   <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date, :required => true %>
+  </div>
+ 
       <%= f.hidden_field :host_id %>
    
     <div class="form-group">

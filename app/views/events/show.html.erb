@@ -7,7 +7,7 @@
     <li>Name: <%= @event.name %></li>
     <li>Description: <%= @event.description %></li>
     <li>Place: <%= @event.place %></li>  
-    <li>Date: <%= @event.DateTime %></li>
+    <li>Date: <%= @event.date.strftime('%a %d %b %Y')  %></li>
   </ul> 
   <div class="btn-group">
     <a href="/events/<%= @event.id %>/edit" button class="btn btn-success btn-lg">Edit</a>
