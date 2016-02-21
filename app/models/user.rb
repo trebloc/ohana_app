@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :events, dependent: :destroy   
+  has_many :events, dependent:  
   has_secure_password
 
   def self.confirm(params)

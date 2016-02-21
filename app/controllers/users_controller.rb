@@ -22,7 +22,6 @@ class UsersController < ApplicationController
     render :show
   end 
 
-
   def edit
     if current_user == set_user
       render :edit
@@ -53,6 +52,11 @@ class UsersController < ApplicationController
       flash[:notice] = "You can't delete that user."
       redirect_to user_path(@user)
     end
+  end  
+
+  def events_index
+    @user = User.find(params[:id])
+    @events = @user.events_indexs
   end  
 
   private
