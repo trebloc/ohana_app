@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    render :new
   end
 
   def create
@@ -20,7 +19,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-    render :show
   end 
 
   def edit

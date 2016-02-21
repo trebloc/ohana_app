@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#destroy"  
 
-  get "/login", to: "sessions#new"
+  get "/login", to: "sessions#new", as: "login"
   get "/logout", to: "sessions#destroy" # <-- strictly speaking this isn't RESTful (it should be a DELETE not GET), but it's super conveient to do it this way
   post "/sessions", to: "sessions#create"  
 
