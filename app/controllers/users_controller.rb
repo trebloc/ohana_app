@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in?, only: [:show, :edit, :update]  
-
+  
   def index
     @users = User.all
     render :index
