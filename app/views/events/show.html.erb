@@ -9,8 +9,9 @@
     <li>Place: <%= @event.place %></li>  
     <li>Date: <%= @event.date.strftime('%a %d %b %Y')  %></li>
   </ul> 
+
   <div class="btn-group">
-    <a href="/events/<%= @event.id %>/edit" button class="btn btn-success btn-lg">Edit</a>
+    <%= link_to "Edit", edit_event_path(@event.id), class: "btn btn-success btn-lg" %>
   </div>
 
   <div class="btn-group">

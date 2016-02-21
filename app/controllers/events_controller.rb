@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :logged_in?, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @events = Event.all
     render :index
@@ -19,19 +21,34 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find_by_id(params[:id])
-  end 
+    unless current_user == @event.user
+      redirect_to user_path(current_user)    
+    end 
+  end  
 
   def update
     @event = Event.find_by_id(params[:id])
-    @event.update(event_params)
-    redirect_to event_path(@event)
+    if current_user == @event.user
+      if @event.update_attributes(event_params)
+        flash[:notice] = "Successfully updated event."
+        redirect_to event_path(@event)
+      else
+        flash[:error] = @event.errors.full_messages.join(", ")
+        redirect_to edit_event_path(@event)
+      end
+    else
+      redirect_to user_path(current_user)
+    end
   end  
 
   def destroy
     @event = Event.find_by_id(params[:id])
-    @event.destroy
-    redirect_to events_path
-  end  
+    if current_user == @event.user
+      @event.destroy
+      flash[:notice] = "Successfully deleted event."
+    end
+    redirect_to events_path(current_user)
+  end
 
   private
 
