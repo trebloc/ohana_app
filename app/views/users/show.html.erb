@@ -10,6 +10,9 @@
         <li><b>Name: </b><%= @user.first_name %> <%= @user.last_name %></li>
         <li><b>Email: </b><%= @user.email %></li>
       </ul> 
+    <div>
+
+    </div>  
         <% if current_user == @user %>
         <div class="btn-group">
           <a href="/users/<%= @user.id %>/edit" class= "btn btn-success btn-lg">
@@ -17,7 +20,7 @@
           </a>
         </div>
         <div class="btn-group">
-          <%= button_to "Delete profile", @user, {method: :delete, data: {confirm: "Are you sure you want to delete your account?"}, class: "btn btn-danger btn-lg"}  %>
+          <%= button_to "Delete profile", @user, {method: :delete, data: {confirm: "Are you sure you want to delete your account #{@user.first_name}?"}, class: "btn btn-danger btn-lg"}  %>
         <% end %>  
       </div>
             <p>Creat a new <%= link_to "Event", new_event_path %> </p>  
