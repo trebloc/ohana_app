@@ -23,7 +23,7 @@
     <%= f.datetime_select :date, :required => true %>
   </div>
  
-      <%= f.hidden_field :host_id %>
+      <%= f.hidden_field :host_id, value: current_user.id  %>
    
     <div class="form-group">
       <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>

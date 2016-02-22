@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in?, only: [:show, :edit, :update]  
-
+  before_action :logged_out?, only: [:new, :create]
+  
   def index
     @users = User.all
     render :index
@@ -8,7 +9,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    render :new
   end
 
   def create
@@ -19,9 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-    render :show
   end 
-
 
   def edit
     if current_user == set_user
@@ -53,6 +51,11 @@ class UsersController < ApplicationController
       flash[:notice] = "You can't delete that user."
       redirect_to user_path(@user)
     end
+  end  
+
+  def events_index
+    @user = User.find(params[:id])
+    @events = @user.events_indexs
   end  
 
   private
