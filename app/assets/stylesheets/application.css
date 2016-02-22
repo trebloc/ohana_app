@@ -22,7 +22,7 @@
 }
 
 #tagline {
-  margin-top: -12px;
+  margin-top: -25px;
 }
 
  .nav {
@@ -62,4 +62,13 @@ h1 span.spacer {
 
 li {
   list-style-type: none;
+}
+
+p {
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  padding: 12px;
 }
