@@ -10,6 +10,7 @@
     <li>Date: <%= @event.date.strftime('%a %d %b %Y')  %></li>
   </ul> 
 
+<% if @event.host_id == current_user.id %>
 <div>
   <div class="btn-group">
     <%= link_to "Edit", edit_event_path(@event.id), class: "btn btn-success btn-lg" %>
@@ -19,6 +20,5 @@
     <%= button_to "Delete", @event,
    { method: :delete, data: { confirm: "Are you sure you want to delete '#{@event.name}'?"}, class: 'btn btn-danger btn-lg' } %>
   </div>
-</div> 
-
-
+<% end %>  
+</div>
