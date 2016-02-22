@@ -17,6 +17,10 @@
   background-size: cover;
 }
 
+#splash {
+  height: 600px;
+}
+
  .nav {
   padding-right: 20px;
  }
