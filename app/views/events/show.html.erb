@@ -10,7 +10,7 @@
             <li><strong>Name:</strong> <%= @event.name %></li>
             <li><strong>Description:</strong> <%= @event.description %></li>
             <li><strong>Place:</strong> <%= @event.place %></li>  
-            <li><strong>Date:</strong> <%= @event.date.strftime('%A, %B %d, %Y')  %></li>
+            <li><strong>Date:</strong> <%= @event.date.strftime('%A, %B %d, %Y') %></li>
             <li><strong>Time:</strong> <%= @event.date.strftime('%I:%M %p') %></li>
           </ul> 
         </div>  
@@ -24,7 +24,11 @@
            { method: :delete, data: { confirm: "Are you sure you want to delete '#{@event.name}'?"}, class: 'btn btn-default btn-lg' } %>
           </div>
           <% end %>  
-         <% end %> 
+        <% end %> 
+        <div class="panel panel-default">
+          <h2>Menu</h2>
+          
+        </div>
       </div>   
   </div>
 </div>      

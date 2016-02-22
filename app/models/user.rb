@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :events
-  # has_many :rsvps, through: :events 
+  has_many :reservations, through: :events 
   has_secure_password
 
   def self.confirm(params)
