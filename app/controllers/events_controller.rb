@@ -50,7 +50,7 @@ class EventsController < ApplicationController
     @event = Event.find_by_id(params[:id])
       @event.destroy
       flash[:notice] = "Successfully deleted event."
-    redirect_to events_path(current_user)
+      redirect_to events_path(current_user)
   end
 
   private

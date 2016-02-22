@@ -7,7 +7,8 @@
     <li>Name: <%= @event.name %></li>
     <li>Description: <%= @event.description %></li>
     <li>Place: <%= @event.place %></li>  
-    <li>Date: <%= @event.date.strftime('%a %d %b %Y')  %></li>
+    <li>Date: <%= @event.date.strftime('%A, %B %d, %Y')  %></li>
+    <li>Time: <%= @event.date.strftime('%I:%M %p') %></li>
   </ul> 
 
 <% if @event.host_id == current_user.id %>
