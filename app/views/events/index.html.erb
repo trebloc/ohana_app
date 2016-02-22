@@ -3,12 +3,14 @@
 </div>
 
 <div class="container">
-
-<% @events.each do |event| %>
-  <p>
-    <strong><%= link_to event.name, event_path(event.id) %></strong>
-  </p>
-<% end %>
-
-<p>Create a <%= link_to "New Event", new_event_path %>.</p>
-</div>
+  <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+        <% @events.each do |event| %>
+          <p><strong><%= link_to event.name, event_path(event.id) %></strong></p>
+        <% end %>
+          <p>Create a <%= link_to "New Event", new_event_path %>.</p>
+        </div>  
+      </div>
+  </div>
+</div>      
