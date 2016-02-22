@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160219015822) do
     t.string   "description"
     t.string   "place"
     t.date     "date"
-    t.time     "time"
     t.integer  "host_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
