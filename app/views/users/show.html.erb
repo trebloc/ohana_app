@@ -23,6 +23,8 @@
           <%= button_to "Delete profile", @user, {method: :delete, data: {confirm: "Are you sure you want to delete your account #{@user.first_name}?"}, class: "btn btn-danger btn-lg"}  %>
         <% end %>  
       </div>
-            <p>Creat a new <%= link_to "Event", new_event_path %> </p>  
+      <div>
+        <p>Creat a new <%= link_to "Event", new_event_path %> </p> 
+      </div>   
     </div>   
 </div>

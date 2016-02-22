@@ -3,24 +3,26 @@
 </div>
 
 <div class="container">
-  <ul>
-    <li>Name: <%= @event.name %></li>
-    <li>Description: <%= @event.description %></li>
-    <li>Place: <%= @event.place %></li>  
-    <li>Date: <%= @event.date.strftime('%A, %B %d, %Y')  %></li>
-    <li>Time: <%= @event.date.strftime('%I:%M %p') %></li>
-  </ul> 
-
-<% if @event.host_id == current_user.id %>
-<div>
-  <div class="btn-group">
-    <%= link_to "Edit", edit_event_path(@event.id), class: "btn btn-success btn-lg" %>
+  <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <ul>
+          <li><strong>Name:</strong> <%= @event.name %></li>
+          <li><strong>Description:</strong> <%= @event.description %></li>
+          <li><strong>Place:</strong> <%= @event.place %></li>  
+          <li><strong>Date:</strong> <%= @event.date.strftime('%A, %B %d, %Y')  %></li>
+          <li><strong>Time:</strong> <%= @event.date.strftime('%I:%M %p') %></li>
+        </ul> 
+        <% if @event.host_id == current_user.id %>
+      <div class="col-lg-8 col-lg-offset-1">        
+          <div class="btn-group">
+            <%= link_to "Edit", edit_event_path(@event.id), class: "btn btn-success btn-lg" %>
+          </div>
+          <div class="btn-group">
+            <%= button_to "Delete", @event,
+           { method: :delete, data: { confirm: "Are you sure you want to delete '#{@event.name}'?"}, class: 'btn btn-danger btn-lg' } %>
+          </div>
+        <% end %> 
+      </div>   
+    </div>
   </div>
-
-  <div class="btn-group">
-    <%= button_to "Delete", @event,
-   { method: :delete, data: { confirm: "Are you sure you want to delete '#{@event.name}'?"}, class: 'btn btn-danger btn-lg' } %>
-  </div>
-
-<% end %>  
-</div>
+</div>      

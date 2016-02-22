@@ -21,6 +21,10 @@
   height: 600px;
 }
 
+#tagline {
+  margin-top: -12px;
+}
+
  .nav {
   padding-right: 20px;
  }
