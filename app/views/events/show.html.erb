@@ -23,11 +23,44 @@
             <%= button_to "Delete", @event,
            { method: :delete, data: { confirm: "Are you sure you want to delete '#{@event.name}'?"}, class: 'btn btn-default btn-lg' } %>
           </div>
+                         
           <% end %>  
         <% end %> 
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+    <%= form_for @reservation do |f| %>
+      <div class="form-group">
+        <%= f.label :item_name, "Item", class: "control-label" %>
+        <%= f.text_field :item_name, :required => true, class: "form-control", placeholder: "Item" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :item_description, "Description", class: "control-label" %>
+        <%= f.text_field :item_description, :required => true, class: "form-control", placeholder: "Description" %>
+      </div>  
+      <div class="form-group">
+        <%= f.label :item_image_url, "Image", class: "control-label" %>
+        <%= f.text_field :item_image_url, :required => true, class: "form-control", placeholder: "Image" %>
+      </div>  
+
+      <%= f.hidden_field :event_id, :value => @event.id %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+      <div class="form-group">
+        <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
+      </div>
+      <% end %> 
+  </div>  
+
+
         <div class="panel panel-default">
           <h2>Menu</h2>
-          
+          <ul>
+            <li>
+            Item: <%= @reservation.item_name %>
+            Description: @reservation.description
+            </li>                        
+          </ul>  
         </div>
       </div>   
   </div>
