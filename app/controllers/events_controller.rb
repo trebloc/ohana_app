@@ -16,15 +16,15 @@ class EventsController < ApplicationController
       flash[:notice] = "Successfully created event."
       redirect_to event_path(@event)
     else
-      flash[:error] = @event.errors.full_messages.join(", ")
+      flash[:error] = "Cannot create event."
       redirect_to new_event_path
     end
   end
 
   def show
     @event = Event.find_by_id(params[:id])
-    @reservation=Reservation.new
-
+    @new_reservation = Reservation.new
+    @reservation = @event.reservations
   end
 
   def edit

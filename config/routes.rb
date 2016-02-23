@@ -23,4 +23,5 @@ Rails.application.routes.draw do
 
   # get 'event/:id/, to: "reservations#new" 
   post 'event/:id/reservations', to:'reservations#create', as: "reservations" 
+  delete 'event/:id/reservations', to: "reservations#destroy"
 end
