@@ -58,12 +58,13 @@
         <li>Description: <%= reservation.item_description %></li> 
         <li><img src="<%= reservation.item_image_url %>"</li>
       </ul> 
+      
       <div class="btn-group">
-        <%= button_to "Edit",reservations_delete_path(@event, reservation),
-          { method: :patch, class: 'btn btn-default btn-lg' } %>
+        <%= link_to "Edit",edit_reservation_path(@event, reservation),
+          { method: :get, class: 'btn btn-default btn-lg' } %>
       </div>       
       <div class="btn-group">
-        <%= button_to "Delete",reservations_delete_path(@event, reservation),
+        <%= button_to "Delete",delete_reservation_path(@event, reservation),
           { method: :delete, class: 'btn btn-default btn-lg' } %>
       </div>            
     <% end %>  

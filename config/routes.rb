@@ -22,8 +22,8 @@ Rails.application.routes.draw do
   delete '/events/:id', to: "events#destroy"
 
   # get 'event/:id/, to: "reservations#new" 
-  post 'event/:id/reservations', to:'reservations#create', as: "reservations" 
-  get '/event/:id/reservations/edit', to: 'reservations#edit', as: "edit_reservations"
-  patch 'event/:event_id/reservations/:id', to: 'reservations#update'
-  delete 'event/:event_id/reservations/:id', to: "reservations#destroy", as: "reservations_delete"  
+  post '/events/:id/reservations', to:'reservations#create', as: "reservations" 
+  get '/events/:event_id/reservations/:id/edit', to: 'reservations#edit', as: "edit_reservation"
+  patch '/events/:event_id/reservations/:id', to: 'reservations#update'
+  delete '/events/:event_id/reservations/:id', to: "reservations#destroy", as: "delete_reservation"  
 end

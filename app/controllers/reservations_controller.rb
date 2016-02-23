@@ -23,6 +23,16 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find_by_id(params[:id])      
   end
 
+  def edit
+    @reservation = Reservation.find_by_id(params[:id])
+  end  
+
+  def update  
+    @reservation = Reservation.find_by_id(params[:id])  
+    @reservation.update_attributes(reservation_params)
+    redirect_to event_path(params[:event_id])
+  end      
+
   def destroy
     @reservation = Reservation.find_by_id(params[:id])
       @reservation.destroy
