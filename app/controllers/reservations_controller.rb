@@ -27,7 +27,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find_by_id(params[:id])
       @reservation.destroy
       flash[:notice] = "Successfully deleted item."
-      redirect_to event_path
+      redirect_to event_path(params[:event_id])
   end  
   
   private

@@ -22,8 +22,7 @@
           <div class="btn-group">
             <%= button_to "Delete", @event,
            { method: :delete, data: { confirm: "Are you sure you want to delete '#{@event.name}'?"}, class: 'btn btn-default btn-lg' } %>
-          </div>
-                         
+          </div>           
           <% end %>  
         <% end %> 
 
@@ -48,6 +47,7 @@
       <div class="form-group">
         <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
       </div>
+
       <% end %> 
   </div>  
   <div class="panel panel-default">
@@ -57,7 +57,15 @@
         <li>Item: <%= reservation.item_name %></li> 
         <li>Description: <%= reservation.item_description %></li> 
         <li><img src="<%= reservation.item_image_url %>"</li>
-      </ul>     
+      </ul> 
+      <div class="btn-group">
+        <%= button_to "Edit",reservations_delete_path(@event, reservation),
+          { method: :patch, class: 'btn btn-default btn-lg' } %>
+      </div>       
+      <div class="btn-group">
+        <%= button_to "Delete",reservations_delete_path(@event, reservation),
+          { method: :delete, class: 'btn btn-default btn-lg' } %>
+      </div>            
     <% end %>  
   </div>
   </div>   

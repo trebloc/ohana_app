@@ -23,5 +23,7 @@ Rails.application.routes.draw do
 
   # get 'event/:id/, to: "reservations#new" 
   post 'event/:id/reservations', to:'reservations#create', as: "reservations" 
-  delete 'event/:id/reservations', to: "reservations#destroy"
+  get '/event/:id/reservations/edit', to: 'reservations#edit', as: "edit_reservations"
+  patch 'event/:event_id/reservations/:id', to: 'reservations#update'
+  delete 'event/:event_id/reservations/:id', to: "reservations#destroy", as: "reservations_delete"  
 end
