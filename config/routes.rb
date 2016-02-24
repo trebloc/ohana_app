@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'photos/index', to: "photos#index", as: "photos"
+
   get 'welcome/index'
   root to: "welcome#index"  
 
