@@ -2,13 +2,14 @@
  * app/assets/stylesheets/application.css
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datetimepicker";
 /*
  * ...
  *
- *= require bootstrap-3.3.6.min
- *= require_tree .
- *= require_self
  */
+
 
 .jumbotron {
   background-image: url(/assets/food.jpg);
