@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   def index
     # add this as an ENV variable
     key = ENV["API_KEY"]
-    url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=#{key}&content_type=1&tags=hawaiianfood&privacy_filter=1&page=1&per_page=50"
+    url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=#{key}&content_type=1&tags=hawaiianfood&privacy_filter=1&page=1&per_page=500"
     response = HTTParty.get(url)
     results = JSON.parse(response.body)
     # @titles = @results["photos"]["photo"].map { |photo| photo["title"] }
