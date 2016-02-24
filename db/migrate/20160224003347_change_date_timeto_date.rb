@@ -1,5 +1,5 @@
 class ChangeDateTimetoDate < ActiveRecord::Migration
   def change
-        change_column :events, :date, :datetime
+    change_column :events, :date, :datetime
   end
 end
