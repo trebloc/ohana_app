@@ -19,6 +19,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
+    # events user is hosting
+    # user >> reservations  >> events
+    # user.events events where user.id is host_id
+    @hosted_events = @user.events
+    # events user is attending
+    @attending_events = @user.reservations.map { |r|  Event.find(r.event_id) }.uniq
   end 
 
   def edit

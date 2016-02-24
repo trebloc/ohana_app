@@ -12,6 +12,24 @@
           <li><b>Email: </b><%= @user.email %></li>
         </ul> 
       </div>  
+      <div class="panel panel-default">
+        <h2>Potlucks Hosting</h2>
+        <!-- each loop using @hosted_events -->
+        <% @hosted_events.each do |event| %>
+          <ul>
+            <li><%= event.name %></li>
+          </ul>  
+        <% end %>  
+      </div>
+      <div class="panel panel-default">
+        <h2>Potlucks Attending</h2>
+        <!-- each loop using @attending_events -->
+        <% @attending_events.each do |event| %>
+          <ul>
+            <li><%= event.name %></li>
+          </ul> 
+        <% end %>          
+      </div>
     <div>
 
     </div>  

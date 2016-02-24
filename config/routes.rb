@@ -20,4 +20,10 @@ Rails.application.routes.draw do
   get '/events/:id/edit', to: 'events#edit', as: "edit_event"
   patch '/events/:id', to: 'events#update'
   delete '/events/:id', to: "events#destroy"
+
+  # get 'event/:id/, to: "reservations#new" 
+  post '/events/:id/reservations', to:'reservations#create', as: "reservations" 
+  get '/events/:event_id/reservations/:id/edit', to: 'reservations#edit', as: "edit_reservation"
+  patch '/events/:event_id/reservations/:id', to: 'reservations#update'
+  delete '/events/:event_id/reservations/:id', to: "reservations#destroy", as: "delete_reservation"  
 end
