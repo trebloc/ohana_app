@@ -8,9 +8,9 @@ class PhotosController < ApplicationController
     response = HTTParty.get(url)
     results = JSON.parse(response.body)
     # @titles = @results["photos"]["photo"].map { |photo| photo["title"] }
-    # binding.pry
     @urls = []
 
+    # binding.pry
     results['photos']['photo'].each do |photo|
       @farm_id = photo['farm']
       @server_id = photo['server']
