@@ -9,7 +9,7 @@
         <h2><strong>Events</strong></h2>
         <% @events.each do |event| %>
         <ul>
-          <li><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></li>
+          <li><strong><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></strong></li>
         </ul>  
         <% end %>
           <p>Create a <%= link_to "New Event", new_event_path %>.</p>
