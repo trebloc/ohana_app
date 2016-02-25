@@ -24,6 +24,7 @@
 
 #tagline {
   margin-top: -25px;
+  padding: 10px;
 }
 
  .nav {
@@ -42,19 +43,19 @@ body {
 }
 
 h1 { 
-   position: absolute; 
-   top: 200px; 
-   left: 0; 
-   width: 100%; 
+  position: absolute; 
+  top: 200px; 
+  left: 0; 
+  width: 100%; 
 }
 
 h1 span { 
-   color: white; 
-   font: 35px/55px; 
-   letter-spacing: -1px;  
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px; 
+  color: white; 
+  font: 35px/55px; 
+  letter-spacing: -1px;  
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px; 
 }
 
 h1 span.spacer {
@@ -65,12 +66,6 @@ li {
   list-style-type: none;
 }
 
-p {
-  margin-bottom: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
 h2 {
   padding: 12px;
 }
@@ -79,6 +74,12 @@ img {
   max-height: 90%;
   max-width: 90%;
   padding-top: 20px;
+}
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
 }
 
 .button {
