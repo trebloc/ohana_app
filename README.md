@@ -9,8 +9,9 @@ The OHANA Potluck App allows a user to create and attend potlucks. When a user R
 * **[Wireframes](#wireframes):** Wireframes of my Project.
 * **[Models](#models):** Models of my Project.
 * **[User Stories](#user-stories):** User stories for my project.
-* **[Heroku Link](#heroku-hosted-project)** Link to project on Heroku.
+* **[Heroku Link](#heroku-hosted-project):** Link to project on Heroku.
 * **[Technologies](#technologies):** The Technologies, Libraries, and Frameworks Used.
+* **[Installation](#installation):** How to Install OHANA Potluck App. 
 * **[Future Development](#future-development):** What I am looking to improve in the future.
 
 
@@ -54,6 +55,20 @@ The OHANA Potluck App allows a user to create and attend potlucks. When a user R
 * Project Management
   * Trello
   * Balsmic
+
+## Installation
+* **Step 1**: Fork and clone this repository
+
+* **Step 2**: Run the following commands in the terminal
+
+```
+bash
+bundle install
+rake db:create db:migrate
+rails s
+```
+
+* **Step 3**: Go to localhost:3000 in your Web Browser  
 
 ## Future Development
 * Allow the app to be more full-featured with email and add the Paperclip gem to allow users to upload pictures of dishes and for a profile picture.
