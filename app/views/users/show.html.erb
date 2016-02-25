@@ -5,15 +5,14 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
       <div class="panel panel-default">
-        <p>Welcome, <%= @user.first_name %> <%= @user.last_name %>.</p>
-        <br>
+        <p>Welcome, <%= @user.first_name %> <%= @user.last_name %> to the OHANA Potluck App!</p><p>You are now set to either host a potluck or attend one.</p>
         <ul>
           <li><b>Name: </b><%= @user.first_name %> <%= @user.last_name %></li>
           <li><b>Email: </b><%= @user.email %></li>
         </ul> 
       </div>  
       <div class="panel panel-default">
-        <h2>Potlucks Hosting</h2>
+        <h2><strong>Potlucks Hosting</strong></h2>
         <!-- each loop using @hosted_events -->
         <% @hosted_events.each do |event| %>
           <ul>
@@ -22,7 +21,7 @@
         <% end %>  
       </div>
       <div class="panel panel-default">
-        <h2>Potlucks Attending</h2>
+        <h2><strong>Potlucks Attending</strong></h2>
         <!-- each loop using @attending_events -->
         <% @attending_events.each do |event| %>
           <ul>
