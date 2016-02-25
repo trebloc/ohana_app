@@ -21,7 +21,8 @@
 
 $(document).on("page:change", function(){
   $('#datetimepicker').datetimepicker();
-})
+});
+
 
 
 

@@ -36,7 +36,9 @@ class EventsController < ApplicationController
   def update
     @event = Event.find_by_id(params[:id])
     # if current_user == @event.user
-      if @event.update_attributes(event_params)
+      p ">>>>>>>> event_params date is: #{event_params[:date]}"
+      if @event.update(event_params)
+        p ">>>>>>>> @event.date is: #{@event.date}"
         flash[:notice] = "Successfully updated event."
         redirect_to event_path(@event)
       else
@@ -58,7 +60,12 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :description, :place, :date, :host_id)
+    valid = params.require(:event).permit(:name, :description, :place, :date, :host_id)
+  
+    date_format = "%m/%d/%Y %I:%M %p"
+    # offset = DateTime.now.strftime
+    valid[:date] = valid[:date] != "" ? DateTime.strptime(valid[:date], date_format).to_s : valid[:date]
+    return valid
   end     
 
   def current_user?
