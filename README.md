@@ -7,6 +7,7 @@ The OHANA Potluck App allows a user to create and attend potlucks. When a user R
 ## Contents
 * **[Screenshot](#screenshot):** OHANA Potluck App
 * **[Wireframes](#wireframes):** Wireframes of my Project
+* **[Models](#models):** Models of my Project
 * **[Heroku Link](#heroku-hosted-project)**
 * **[Technologies](#technologies):** The Technologies, Libraries, and Frameworks Used.
 * **[Future Development](#future-development):** What I am looking to improve in the future.
@@ -16,7 +17,10 @@ The OHANA Potluck App allows a user to create and attend potlucks. When a user R
 <img src="splash.jpg">
 
 ## Wireframes
-<img src="wireframes.png">
+<img src="wireframes.jpg">
+
+## Models
+<img src="models.jpg">
 
 
 
