@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :logged_in?, only: [:new, :create, :edit, :update, :destroy]
+  before_action :logged_in?, only: [:new, :create, :show, :edit, :update, :destroy]
   before_action :current_user?, only: [:edit, :destroy]
 
   def index
@@ -22,9 +22,9 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find_by_id(params[:id])
-    @new_reservation = Reservation.new
-    @reservation = @event.reservations
+      @event = Event.find_by_id(params[:id])
+      @new_reservation = Reservation.new
+      @reservation = @event.reservations
   end
 
   def edit
@@ -36,9 +36,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find_by_id(params[:id])
     # if current_user == @event.user
-      p ">>>>>>>> event_params date is: #{event_params[:date]}"
       if @event.update(event_params)
-        p ">>>>>>>> @event.date is: #{@event.date}"
         flash[:notice] = "Successfully updated event."
         redirect_to event_path(@event)
       else
