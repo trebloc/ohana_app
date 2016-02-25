@@ -6,13 +6,13 @@
   <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <div class="panel panel-default">
-          <ul>
-            <li><strong>Name:</strong> <%= @event.name %></li>
-            <li><strong>Description:</strong> <%= @event.description %></li>
-            <li><strong>Place:</strong> <%= @event.place %></li>  
-            <li><strong>Date:</strong> <%= @event.date.strftime('%A, %B %d, %Y') %></li>
-            <li><strong>Time:</strong> <%= @event.date.strftime('%I:%M %p') %></li>
-          </ul> 
+          <h2><strong>Potluck: <%= @event.name %></strong></h2>
+            <ul>
+              <li><strong>Description:</strong> <%= @event.description %></li>
+              <li><strong>Place:</strong> <%= @event.place %></li>  
+              <li><strong>Date:</strong> <%= @event.date.strftime('%A, %B %d, %Y') %></li>
+              <li><strong>Time:</strong> <%= @event.date.strftime('%I:%M %p') %></li>
+            </ul> 
         </div>  
         <% if current_user %>
         <% if @event.host_id == current_user.id %>
@@ -25,53 +25,54 @@
           </div>           
           <% end %>  
         <% end %> 
-
   <div>
-  <h2>RSVP for Potluck</h2>
-    <%= form_for @new_reservation do |f| %>
-      <div class="form-group">
-        <%= f.label :item_name, "Item", class: "control-label" %>
-        <%= f.text_field :item_name, :required => true, class: "form-control", placeholder: "Item" %>
-        </div>
-      <div class="form-group">
-        <%= f.label :item_description, "Description", class: "control-label" %>
-        <%= f.text_field :item_description, :required => true, class: "form-control", placeholder: "Description" %>
-      </div>  
-      <div class="form-group">
-        <%= f.label :item_image_url, "Image", class: "control-label" %>
-        <%= f.text_field :item_image_url, :required => true, class: "form-control", placeholder: "Image" %>
-      </div>  
+        <h2><strong>RSVP for Potluck</strong></h2>
+          <%= form_for @new_reservation do |f| %>
+            <div class="form-group">
+              <%= f.label :item_name, "Item", class: "control-label" %>
+              <%= f.text_field :item_name, :required => true, class: "form-control", placeholder: "Item" %>
+              </div>
+            <div class="form-group">
+              <%= f.label :item_description, "Description", class: "control-label" %>
+              <%= f.text_field :item_description, :required => true, class: "form-control", placeholder: "Description" %>
+            </div>  
+            <div class="form-group">
+              <%= f.label :item_image_url, "Image", class: "control-label" %>
+              <%= f.text_field :item_image_url, :required => true, class: "form-control", placeholder: "Image" %>
+            </div>  
 
-      <%= f.hidden_field :event_id, :value => @event.id %>
-      <%= f.hidden_field :user_id, :value => current_user.id %>
+            <%= f.hidden_field :event_id, :value => @event.id %>
+            <%= f.hidden_field :user_id, :value => current_user.id %>
 
-      <div class="form-group">
-        <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
-      </div>
+            <div class="form-group">
+              <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
+            </div>
 
-      <% end %> 
-  </div>  
+            <% end %> 
+        </div>  
   <div class="panel panel-default">
-    <h2>Menu</h2>
-    <% @reservation.each do |reservation| %>
-      <ul>
-        <li>Item: <%= reservation.item_name %></li> 
-        <li>Description: <%= reservation.item_description %></li> 
-        <li><img src="<%= reservation.item_image_url %>"</li>
-      </ul> 
-       <% if current_user %>
-        <% if reservation.user_id == current_user.id %>
-      <div class="btn-group">
-        <%= link_to "Edit",edit_reservation_path(@event, reservation),
-          { method: :get, class: 'btn btn-default btn-lg' } %>
-      </div>       
-      <div class="btn-group">
-        <%= button_to "Delete",delete_reservation_path(@event, reservation),
-          { method: :delete, class: 'btn btn-default btn-lg' } %>
-      </div>            
-    <% end %> 
-    <% end %>
-    <% end %>  
+      <h2><strong>Menu</strong></h2>
+      <% @reservation.each do |reservation| %>
+        <ul>
+          <li><strong>Item: <%= reservation.item_name %></strong></li> 
+          <li><strong>Description: <%= reservation.item_description %></strong></li> 
+          <li><img src="<%= reservation.item_image_url %>"</li>
+        </ul> 
+         <% if current_user %>
+          <% if reservation.user_id == current_user.id %>
+        <div class="button">
+          <div class="btn-group">
+            <%= link_to "Edit",edit_reservation_path(@event, reservation),
+              { method: :get, class: 'btn btn-default btn-lg' } %>
+          </div>       
+          <div class="btn-group">
+            <%= button_to "Delete",delete_reservation_path(@event, reservation),
+              { method: :delete, class: 'btn btn-default btn-lg' } %>
+          </div>
+        </div>              
+      <% end %> 
+      <% end %>
+      <% end %>  
   </div>
   </div>   
 </div>

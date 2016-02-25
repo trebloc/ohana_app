@@ -6,7 +6,7 @@
   <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <div class="panel panel-default">
-        <h2>Events</h2>
+        <h2><strong>Events</strong></h2>
         <% @events.each do |event| %>
         <ul>
           <li><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></li>
