@@ -15,15 +15,21 @@
       <%= f.text_area :description, :required => true, class: "form-control", placeholder: "Description" %>
     </div>
     <div class="form-group">
-      <%= f.label :place, "Place", class: " control-label" %>
+      <%= f.label :place, "Place", class: "control-label" %>
       <%= f.text_field :place, :required => true, class: "form-control", placeholder: "Place" %>
     </div>
-   <div class="field">
-    <%= f.label :date %><br />
-    <%= f.datetime_select :date, :required => true %>
-  </div>
- 
-      <%= f.hidden_field :host_id, value: current_user.id  %>
+
+    <div class="form-group">
+      <%= f.label :date, "Date", class: "control-label" %>
+      <div class='input-group date' id="datetimepicker">
+        <%= f.text_field :date, {class: "form-control", placeholder: "Date"} %>
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+
+    <%= f.hidden_field :host_id, value: current_user.id  %>
    
     <div class="form-group">
       <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>

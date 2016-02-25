@@ -6,8 +6,10 @@ gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
+# bootstrap-sass
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
@@ -26,7 +28,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'bootstrap', '~> 4.0.0.alpha3'
+# to hit Flickr API
+gem 'httparty'
+
+# momentjs-rails
+gem 'momentjs-rails', '>= 2.9.0'
+
+#bootstrap datetimepicker
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -37,6 +46,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-byebug'
 end
 
 group :development do

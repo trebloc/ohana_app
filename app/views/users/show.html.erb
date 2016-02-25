@@ -17,7 +17,7 @@
         <!-- each loop using @hosted_events -->
         <% @hosted_events.each do |event| %>
           <ul>
-            <li><%= event.name %></li>
+            <li><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></li>
           </ul>  
         <% end %>  
       </div>
@@ -26,7 +26,7 @@
         <!-- each loop using @attending_events -->
         <% @attending_events.each do |event| %>
           <ul>
-            <li><%= event.name %></li>
+            <li><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></li>
           </ul> 
         <% end %>          
       </div>

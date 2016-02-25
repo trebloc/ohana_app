@@ -26,6 +26,7 @@
         <ul class="nav navbar-nav">
           <li><%= link_to "Home", "/" %></li>
           <li><%= link_to "Events", events_path %></li>
+          <li><%= link_to "Photos", photos_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
@@ -50,6 +51,7 @@
 </div>
 
 <%= yield %>
+
 
 </body>
 </html>
