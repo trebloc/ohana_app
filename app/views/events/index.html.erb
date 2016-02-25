@@ -6,12 +6,12 @@
   <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <div class="panel panel-default">
-        <h2><strong>Events</strong></h2>
-        <% @events.each do |event| %>
-        <ul>
-          <li><strong><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></strong></li>
-        </ul>  
-        <% end %>
+          <h2><strong>Events</strong></h2>
+          <% @events.each do |event| %>
+          <ul>
+            <li><strong><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></strong></li>
+          </ul>  
+          <% end %>
           <p>Create a <%= link_to "New Event", new_event_path %>.</p>
         </div>  
       </div>

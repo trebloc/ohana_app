@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'photos/index', to: "photos#index", as: "photos"
-
+  #Splash   
   get 'welcome/index'
   root to: "welcome#index"  
 
+  #Users
   get "/users/signup", to: "users#new", as: "new_user"
   post "/users", to: "users#create"
   get "/users/:id", to: "users#show", as: "user"
@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#destroy"  
 
+  #Sessions
   get "/login", to: "sessions#new", as: "login"
-  get "/logout", to: "sessions#destroy" # <-- strictly speaking this isn't RESTful (it should be a DELETE not GET), but it's super conveient to do it this way
+  get "/logout", to: "sessions#destroy" 
   post "/sessions", to: "sessions#create"  
 
+  #Events
   get 'events', to: "events#index", as: "events"
   get 'events/new', to: "events#new", as: "new_event"  
   post '/events', to:'events#create' 
@@ -23,9 +25,13 @@ Rails.application.routes.draw do
   patch '/events/:id', to: 'events#update'
   delete '/events/:id', to: "events#destroy"
 
+  #Events
   # get 'event/:id/, to: "reservations#new" 
   post '/events/:id/reservations', to:'reservations#create', as: "reservations" 
   get '/events/:event_id/reservations/:id/edit', to: 'reservations#edit', as: "edit_reservation"
   patch '/events/:event_id/reservations/:id', to: 'reservations#update'
   delete '/events/:event_id/reservations/:id', to: "reservations#destroy", as: "delete_reservation"  
+
+  #Photos
+  get 'photos/index', to: "photos#index", as: "photos"
 end

@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
-        <%= form_for @event do |f| %>
+      <%= form_for @event do |f| %>
     <div class="form-group">
       <%= f.label :name, "Name", class: "control-label" %>
       <%= f.text_field :name, :required => true, class: "form-control", placeholder: "Name" %>
@@ -18,7 +18,6 @@
       <%= f.label :place, "Place", class: "control-label" %>
       <%= f.text_field :place, :required => true, class: "form-control", placeholder: "Place" %>
     </div>
-
     <div class="form-group">
       <%= f.label :date, "Date", class: "control-label" %>
       <div class='input-group date' id="datetimepicker">
@@ -28,9 +27,7 @@
         </span>
       </div>
     </div>
-
-    <%= f.hidden_field :host_id, value: current_user.id  %>
-   
+    <%= f.hidden_field :host_id, value: current_user.id  %>   
     <div class="form-group">
       <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
     </div>
