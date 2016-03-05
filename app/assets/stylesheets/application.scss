@@ -70,10 +70,17 @@ h2 {
   padding: 12px;
 }
 
-img {
+#food {
   max-height: 90%;
   max-width: 90%;
   padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.food {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 30px;
 }
 
 p {
