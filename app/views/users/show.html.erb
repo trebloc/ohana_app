@@ -3,8 +3,8 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <div class="panel panel-default">
+    <div class="col-lg-12 col-lg-offset-0">
+      <div class="panel panel-default" id="event">
         <h2><strong>Profile Page</strong></h2>
           <p>Welcome, <%= @user.first_name %> <%= @user.last_name %> to the OHANA Potluck App!</p>
           <ul>
@@ -14,7 +14,7 @@
           <p>You are now set to either host a potluck or attend one.</p>
           <p><strong>Creat a new <%= link_to "Event", new_event_path %></strong></p> 
       </div>  
-      <div class="panel panel-default">
+      <div class="panel panel-default" id="event">
         <h2><strong>Potlucks Hosting</strong></h2>
         <!-- each loop using @hosted_events -->
         <% @hosted_events.each do |event| %>
@@ -23,7 +23,7 @@
           </ul>  
         <% end %>  
       </div>
-      <div class="panel panel-default">
+      <div class="panel panel-default" id="event">
         <h2><strong>Potlucks Attending</strong></h2>
         <!-- each loop using @attending_events -->
         <% @attending_events.each do |event| %>

@@ -2,7 +2,13 @@
   <h1><span>Photos</span></h1>
 </div>  
 <div class="container">
-  <% @urls.each do |url| %>
-    <img class="food" src="<%= url %>"</>
-  <% end %>
-</div>
+  <div class="row">
+    <div class="col-lg-12 col-lg-offset-0">
+      <div class="panel panel-default" id="event">
+        <% @urls.each do |url| %>
+          <img class="food" src="<%= url %>"</>
+        <% end %>
+      </div>
+    </div>
+  </div>  
+</div>  

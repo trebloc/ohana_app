@@ -16,6 +16,7 @@
   background-repeat: no-repeat;
   height: 450px;
   background-size: cover;
+  margin-bottom: 40px;
 }
 
 #splash {
@@ -70,10 +71,11 @@ h2 {
   padding: 12px;
 }
 
-img {
+.menu {
   max-height: 90%;
   max-width: 90%;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 p {
@@ -84,4 +86,12 @@ p {
 
 .button {
   padding: 12px;
+}
+
+#event {
+  padding: 50px;
+}
+
+.food {
+  padding: 20px;
 }
