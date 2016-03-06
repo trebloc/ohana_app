@@ -38,8 +38,8 @@
 }
 
 body {
-  font-size: 25px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
   background-color: #ECF0F1;
 }
 
@@ -56,7 +56,7 @@ h1 span {
   letter-spacing: -1px;  
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px; 
+  padding: 10px 20px; 
 }
 
 h1 span.spacer {
@@ -69,6 +69,7 @@ li {
 
 h2 {
   padding: 12px;
+  font-size: 22px;
 }
 
 .menu {
