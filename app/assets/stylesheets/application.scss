@@ -16,6 +16,7 @@
   background-repeat: no-repeat;
   height: 450px;
   background-size: cover;
+  margin-bottom: 40px;
 }
 
 #splash {
@@ -32,14 +33,16 @@
  }
 
 .navbar-brand {
+  font-family: 'Open Sans';
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 600;  
 }
 
 body {
-  font-size: 25px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
   background-color: #ECF0F1;
+  font-weight: 400;  
 }
 
 h1 { 
@@ -55,7 +58,7 @@ h1 span {
   letter-spacing: -1px;  
   background: rgb(0, 0, 0); /* fallback color */
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px; 
+  padding: 10px 20px; 
 }
 
 h1 span.spacer {
@@ -68,12 +71,14 @@ li {
 
 h2 {
   padding: 12px;
+  font-size: 22px;
 }
 
-img {
+.menu {
   max-height: 90%;
   max-width: 90%;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 p {
@@ -84,4 +89,12 @@ p {
 
 .button {
   padding: 12px;
+}
+
+#event {
+  padding: 50px;
+}
+
+.food {
+  padding: 20px;
 }
