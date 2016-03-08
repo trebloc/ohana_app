@@ -81,11 +81,24 @@ h2 {
   padding-bottom: 20px;
 }
 
+.section-heading {
+  font-weight: bold;
+}
+
 p {
   padding-bottom: 20px;
 }
 
-.dark { background-color: black; height: 1px; border: 0; }
+.dark { 
+  background-color: black;
+  height: 2px; 
+  border: 1; 
+}
+
+.light { 
+  height: 2px; 
+  border: 1; 
+}
 
 .button {
   padding: 12px;
@@ -97,8 +110,19 @@ p {
 
 #event {
   padding: 50px;
+  margin-bottom: 50px;
 }
 
 .food {
   padding: 20px;
+}
+
+footer {
+  background-color: #00003D;
+  height: 100px;
+}
+
+#footer {
+  padding-top: 30px;
+  color: white;
 }
