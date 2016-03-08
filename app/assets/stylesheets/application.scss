@@ -82,13 +82,17 @@ h2 {
 }
 
 p {
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 22px;
+  padding-bottom: 20px;
 }
+
+.dark { background-color: black; height: 1px; border: 0; }
 
 .button {
   padding: 12px;
+}
+
+.bg-primary {
+  background-color: #00003D;
 }
 
 #event {
