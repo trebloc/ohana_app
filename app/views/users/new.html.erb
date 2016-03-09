@@ -3,7 +3,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
+    <div class="col-lg-6 col-lg-offset-3" id="form">
       <%= form_for @user, url: "/users", method: "post" do |f| %>
         <div class="form-group">
           <%= f.label :first_name, "First Name", class: "control-label" %>

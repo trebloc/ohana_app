@@ -1,19 +1,20 @@
 <div class="jumbotron">
   <h1><span>Events</span></h1>
 </div>
-
-<div class="container">
-  <div class="row">
-      <div class="col-lg-12 col-lg-offset-0">
-        <div class="panel panel-default" id="event">
-          <h2><strong>Events</strong></h2>
-            <% @events.each do |event| %>
-              <ul>
-                <li><strong><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></strong></li>
-              </ul>  
-            <% end %>
-            <p>Create a <%= link_to "New Event", new_event_path %>.</p>
-        </div>  
-      </div>
+<section id="potluck">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-0">
+          <div class="container">
+            <h2><strong>Events</strong></h2>
+              <% @events.each do |event| %>
+                <ul>
+                  <li><strong><%= event.date.strftime(' %B %d, %Y') %> - <%= link_to event.name, event_path(event.id) %></strong></li>
+                </ul>  
+              <% end %>
+              <p class="new-event">Create a <%= link_to "New Event", new_event_path %>.</p>
+          </div>  
+        </div>
+      </div>  
   </div>
-</div>      
+</section>        
