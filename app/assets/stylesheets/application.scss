@@ -131,7 +131,10 @@ p {
   margin-left: -55px;
 }
 .food {
+  width: 30%;
+  height: 30%;
   padding: 20px;
+
 }
 
 #name {
@@ -145,6 +148,14 @@ p {
 #potluck {
 background-color: #00003D;  
 color: white;
+padding-bottom: 50px;
+padding-top: 30px;
+margin-top: -50px;
+}
+
+#user {
+background-color: #00003D; 
+color: white; 
 padding-bottom: 50px;
 padding-top: 30px;
 margin-top: -50px;
