@@ -23,14 +23,17 @@
   height: 600px;
 }
 
+#flash_messages {
+  margin-top: 45px;
+}
 #tagline {
   margin-top: -25px;
   padding: 10px;
 }
 
- .nav {
+.nav {
   padding-right: 20px;
- }
+}
 
 .navbar-brand {
   font-family: 'Open Sans';
@@ -74,10 +77,18 @@ h2 {
   font-size: 22px;
 }
 
+#rsvp-text {
+  margin-left: -15px;
+}
+
+#menu-text {
+  padding-left: 10px;
+}
+
 .menu {
   max-height: 90%;
   max-width: 90%;
-  padding-top: 20px;
+  margin-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -113,8 +124,30 @@ p {
   margin-bottom: 50px;
 }
 
+#rsvp {
+  margin-top: 50px;
+  padding: 50px;
+  color: black;
+  margin-left: -55px;
+}
 .food {
   padding: 20px;
+}
+
+#name {
+  padding-left: 85px;
+}
+
+.button {
+  padding-left: 85px;
+}
+
+#potluck {
+background-color: #00003D;  
+color: white;
+padding-bottom: 50px;
+padding-top: 30px;
+margin-top: -50px;
 }
 
 footer {
