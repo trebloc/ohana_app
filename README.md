@@ -16,7 +16,7 @@ The OHANA Potluck App allows a user to create and attend potlucks. When a user R
 
 
 ## OHANA Potluck App
-<img src="splash.jpg">
+<img src="splash.png">
 
 ## Wireframes
 <img src="wireframes.jpg">
